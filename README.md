@@ -137,5 +137,44 @@ done
 done
 ```
 
+# Step 3
+Input nucleotide sequences into blastx to determine significance of transcriptome alignments
+
+# Step 4
+Remove sequences not found within *Cladocopium* species or with poor alignment 
+
+# Step 5
+Identify gene expression values across *Cladocopium* species from their gene expression matrix 
+
+Code to grep enzymes 
+```
+#setting the kallisto undergoing the grep
+KAL="kallisto.isoform.TPM.not_cross_norm"
+echo $KAL
+
+#setting directory for the enzymes
+NITMET="Enzymes"
+echo $NITMET
+
+#calling all directories in enzymes
+for d in $NITMET/*
+do
+echo $d
+
+#seperating the last portion of the enzyme location (specific enzyme name) to be used in file name
+ENZ=$(basename "$d")
+echo $ENZ
+
+#running grep
+grep -Fwf $d $KAL > "$ENZ"."TPM.Expression"
+
+echo "grep -Fwf $d $KAL > "$ENZ"."TPM.Expression""
+
+#ending loop 
+done
+```
+
+# Step 6
+Remove genes with low levels of expression
 
 
