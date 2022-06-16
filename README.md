@@ -61,6 +61,7 @@ done
 ```
 
 *F. whitleyi*
+```
 #setting the organism undergoing the blast
 ORG="Photosymbiont_Whitleyi_genes.fna"
 echo $ORG
