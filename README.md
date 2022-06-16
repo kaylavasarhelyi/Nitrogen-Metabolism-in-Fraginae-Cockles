@@ -22,6 +22,8 @@ Collect nitrogen metabolism enzymes from *Cladocopium* or closely related specie
 # Step 2
 Blast enzymes against *Cladocopium* transcriptomes from each species of cockle to find their nucleotide sequences
 
+Run this script https://github.com/kaylavasarhelyi/Nitrogen-Metabolism-in-Fraginae-Cockles/blob/main/BLAST_FR_Nitrogen.sh
+
 *F. fragum*
 ```
 #setting the organism undergoing the blast
